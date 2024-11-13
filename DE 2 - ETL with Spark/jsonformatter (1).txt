@@ -1,0 +1,32 @@
+[
+  {
+    "field": "key",
+    "type": "BINARY",
+    "description": "The user_id field is used as the key; this is a unique alphanumeric field that corresponds to session/cookie information"
+  },
+  {
+    "field": "value",
+    "type": "BINARY",
+    "description": "This is the full data payload (to be discussed later), sent as JSON"
+  },
+  {
+    "field": "topic",
+    "type": "STRING",
+    "description": "While the Kafka service hosts multiple topics, only those records from the clickstream topic are included here"
+  },
+  {
+    "field": "partition",
+    "type": "INTEGER",
+    "description": "Our current Kafka implementation uses only 2 partitions (0 and 1)"
+  },
+  {
+    "field": "offset",
+    "type": "LONG",
+    "description": "This is a unique value, monotonically increasing for each partition"
+  },
+  {
+    "field": "timestamp",
+    "type": "LONG",
+    "description": "This timestamp is recorded as milliseconds since epoch, and represents the time at which the producer appends a record to a partition"
+  }
+]
